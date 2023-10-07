@@ -1,0 +1,45 @@
+layoutgeneration.treeplotter package
+====================================
+
+Submodules
+----------
+
+layoutgeneration.treeplotter.cli module
+---------------------------------------
+
+.. automodule:: layoutgeneration.treeplotter.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.treeplotter.plotter module
+-------------------------------------------
+
+.. automodule:: layoutgeneration.treeplotter.plotter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.treeplotter.style module
+-----------------------------------------
+
+.. automodule:: layoutgeneration.treeplotter.style
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.treeplotter.tree module
+----------------------------------------
+
+.. automodule:: layoutgeneration.treeplotter.tree
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: layoutgeneration.treeplotter
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,22 @@
+layoutgeneration package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   layoutgeneration.layout
+   layoutgeneration.provider
+   layoutgeneration.strat
+   layoutgeneration.treeplotter
+   layoutgeneration.visualization
+
+Module contents
+---------------
+
+.. automodule:: layoutgeneration
+   :members:
+   :undoc-members:
+   :show-inheritance:

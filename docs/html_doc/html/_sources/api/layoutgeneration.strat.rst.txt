@@ -1,0 +1,93 @@
+layoutgeneration.strat package
+==============================
+
+Submodules
+----------
+
+layoutgeneration.strat.base\_start module
+-----------------------------------------
+
+.. automodule:: layoutgeneration.strat.base_start
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.strat.drunkard\_walk module
+--------------------------------------------
+
+.. automodule:: layoutgeneration.strat.drunkard_walk
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.strat.executor module
+--------------------------------------
+
+.. automodule:: layoutgeneration.strat.executor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.strat.generate\_executor module
+------------------------------------------------
+
+.. automodule:: layoutgeneration.strat.generate_executor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.strat.grid\_placement module
+---------------------------------------------
+
+.. automodule:: layoutgeneration.strat.grid_placement
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.strat.merge\_executor module
+---------------------------------------------
+
+.. automodule:: layoutgeneration.strat.merge_executor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.strat.merge\_regions module
+--------------------------------------------
+
+.. automodule:: layoutgeneration.strat.merge_regions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.strat.place\_al module
+---------------------------------------
+
+.. automodule:: layoutgeneration.strat.place_al
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.strat.room\_placement module
+---------------------------------------------
+
+.. automodule:: layoutgeneration.strat.room_placement
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.strat.space\_partition module
+----------------------------------------------
+
+.. automodule:: layoutgeneration.strat.space_partition
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: layoutgeneration.strat
+   :members:
+   :undoc-members:
+   :show-inheritance:

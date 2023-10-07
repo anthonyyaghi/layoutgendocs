@@ -1,0 +1,29 @@
+layoutgeneration.provider package
+=================================
+
+Submodules
+----------
+
+layoutgeneration.provider.orientation\_provider module
+------------------------------------------------------
+
+.. automodule:: layoutgeneration.provider.orientation_provider
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.provider.region\_provider module
+-------------------------------------------------
+
+.. automodule:: layoutgeneration.provider.region_provider
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: layoutgeneration.provider
+   :members:
+   :undoc-members:
+   :show-inheritance:

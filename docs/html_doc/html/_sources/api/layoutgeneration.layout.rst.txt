@@ -1,0 +1,29 @@
+layoutgeneration.layout package
+===============================
+
+Submodules
+----------
+
+layoutgeneration.layout.orientation module
+------------------------------------------
+
+.. automodule:: layoutgeneration.layout.orientation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+layoutgeneration.layout.region module
+-------------------------------------
+
+.. automodule:: layoutgeneration.layout.region
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: layoutgeneration.layout
+   :members:
+   :undoc-members:
+   :show-inheritance:

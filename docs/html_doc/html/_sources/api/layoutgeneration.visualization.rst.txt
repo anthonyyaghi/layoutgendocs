@@ -1,0 +1,21 @@
+layoutgeneration.visualization package
+======================================
+
+Submodules
+----------
+
+layoutgeneration.visualization.plot module
+------------------------------------------
+
+.. automodule:: layoutgeneration.visualization.plot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: layoutgeneration.visualization
+   :members:
+   :undoc-members:
+   :show-inheritance:

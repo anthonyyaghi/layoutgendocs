@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>layoutgeneration.strat package &#8212; LayoutGeneration 0.1.post1.dev5+ge7ab6af.d20230406 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="layoutgeneration.treeplotter package" href="layoutgeneration.treeplotter.html" />
+    <link rel="prev" title="layoutgeneration.provider package" href="layoutgeneration.provider.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="layoutgeneration-strat-package">
+<h1>layoutgeneration.strat package<a class="headerlink" href="#layoutgeneration-strat-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-layoutgeneration.strat.base_start">
+<span id="layoutgeneration-strat-base-start-module"></span><h2>layoutgeneration.strat.base_start module<a class="headerlink" href="#module-layoutgeneration.strat.base_start" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="layoutgeneration.strat.base_start.BaseStrat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.base_start.</span></span><span class="sig-name descname"><span class="pre">BaseStrat</span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/base_start.html#BaseStrat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.base_start.BaseStrat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/abc.html#abc.ABC" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="layoutgeneration.strat.base_start.BaseStrat.generate">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/base_start.html#BaseStrat.generate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.base_start.BaseStrat.generate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>region</strong> – Region in which to generate other regions</p>
+</dd>
+</dl>
+<p>returns a set of regions contain in the input region.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-layoutgeneration.strat.drunkard_walk">
+<span id="layoutgeneration-strat-drunkard-walk-module"></span><h2>layoutgeneration.strat.drunkard_walk module<a class="headerlink" href="#module-layoutgeneration.strat.drunkard_walk" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="layoutgeneration.strat.drunkard_walk.DrunkardsWalk">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.drunkard_walk.</span></span><span class="sig-name descname"><span class="pre">DrunkardsWalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_nb_steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient_prov</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.provider.html#layoutgeneration.provider.orientation_provider.OrientationProvider" title="layoutgeneration.provider.orientation_provider.OrientationProvider"><span class="pre">OrientationProvider</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">choices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.RegionType" title="layoutgeneration.layout.region.RegionType"><span class="pre">RegionType</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region_prov</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.provider.html#layoutgeneration.provider.region_provider.RegionProvider" title="layoutgeneration.provider.region_provider.RegionProvider"><span class="pre">RegionProvider</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/layoutgeneration/strat/drunkard_walk.html#DrunkardsWalk"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.drunkard_walk.DrunkardsWalk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#layoutgeneration.strat.base_start.BaseStrat" title="layoutgeneration.strat.base_start.BaseStrat"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseStrat</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="layoutgeneration.strat.drunkard_walk.DrunkardsWalk.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/drunkard_walk.html#DrunkardsWalk.generate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.drunkard_walk.DrunkardsWalk.generate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>region</strong> – Region in which to generate other regions</p>
+</dd>
+</dl>
+<p>returns a set of regions contain in the input region.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="layoutgeneration.strat.drunkard_walk.check_location">
+<span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.drunkard_walk.</span></span><span class="sig-name descname"><span class="pre">check_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/layoutgeneration/strat/drunkard_walk.html#check_location"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.drunkard_walk.check_location" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-layoutgeneration.strat.executor">
+<span id="layoutgeneration-strat-executor-module"></span><h2>layoutgeneration.strat.executor module<a class="headerlink" href="#module-layoutgeneration.strat.executor" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="layoutgeneration.strat.executor.RegionNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.executor.</span></span><span class="sig-name descname"><span class="pre">RegionNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#layoutgeneration.strat.base_start.BaseStrat" title="layoutgeneration.strat.base_start.BaseStrat"><span class="pre">BaseStrat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/layoutgeneration/strat/executor.html#RegionNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.executor.RegionNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="layoutgeneration.treeplotter.html#layoutgeneration.treeplotter.tree.Node" title="layoutgeneration.treeplotter.tree.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="layoutgeneration.strat.executor.execute_strats">
+<span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.executor.</span></span><span class="sig-name descname"><span class="pre">execute_strats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#layoutgeneration.strat.executor.RegionNode" title="layoutgeneration.strat.executor.RegionNode"><span class="pre">RegionNode</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">starts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.Dict" title="(in Python v3.8)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.RegionType" title="layoutgeneration.layout.region.RegionType"><span class="pre">RegionType</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#layoutgeneration.strat.base_start.BaseStrat" title="layoutgeneration.strat.base_start.BaseStrat"><span class="pre">BaseStrat</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#layoutgeneration.strat.executor.RegionNode" title="layoutgeneration.strat.executor.RegionNode"><span class="pre">RegionNode</span></a></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/executor.html#execute_strats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.executor.execute_strats" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> – The initial region to applying generation strategies on.</p></li>
+<li><p><strong>starts</strong> – The size of this list determines the depth of the final tree. Each entry in the list is a dictionary</p></li>
+</ul>
+</dd>
+</dl>
+<p>specifying the strategy to be used on at each tree level and for each type of regions</p>
+</dd></dl>
+
+</section>
+<section id="module-layoutgeneration.strat.generate_executor">
+<span id="layoutgeneration-strat-generate-executor-module"></span><h2>layoutgeneration.strat.generate_executor module<a class="headerlink" href="#module-layoutgeneration.strat.generate_executor" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="layoutgeneration.strat.generate_executor.extract_strategies">
+<span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.generate_executor.</span></span><span class="sig-name descname"><span class="pre">extract_strategies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.8/library/stdtypes.html#str" title="(in Python v3.8)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/generate_executor.html#extract_strategies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.generate_executor.extract_strategies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="layoutgeneration.strat.generate_executor.generate_executor">
+<span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.generate_executor.</span></span><span class="sig-name descname"><span class="pre">generate_executor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">strats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#layoutgeneration.strat.executor.RegionNode" title="layoutgeneration.strat.executor.RegionNode"><span class="pre">RegionNode</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/generate_executor.html#generate_executor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.generate_executor.generate_executor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="layoutgeneration.strat.generate_executor.generate_executor_from_json">
+<span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.generate_executor.</span></span><span class="sig-name descname"><span class="pre">generate_executor_from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/stdtypes.html#str" title="(in Python v3.8)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/layoutgeneration/strat/generate_executor.html#generate_executor_from_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.generate_executor.generate_executor_from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-layoutgeneration.strat.grid_placement">
+<span id="layoutgeneration-strat-grid-placement-module"></span><h2>layoutgeneration.strat.grid_placement module<a class="headerlink" href="#module-layoutgeneration.strat.grid_placement" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="layoutgeneration.strat.grid_placement.GridPlacement">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.grid_placement.</span></span><span class="sig-name descname"><span class="pre">GridPlacement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cell_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">choices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.RegionType" title="layoutgeneration.layout.region.RegionType"><span class="pre">RegionType</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region_prov</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.provider.html#layoutgeneration.provider.region_provider.RegionProvider" title="layoutgeneration.provider.region_provider.RegionProvider"><span class="pre">RegionProvider</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient_prov</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.provider.html#layoutgeneration.provider.orientation_provider.OrientationProvider" title="layoutgeneration.provider.orientation_provider.OrientationProvider"><span class="pre">OrientationProvider</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_extra_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#bool" title="(in Python v3.8)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/layoutgeneration/strat/grid_placement.html#GridPlacement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.grid_placement.GridPlacement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#layoutgeneration.strat.base_start.BaseStrat" title="layoutgeneration.strat.base_start.BaseStrat"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseStrat</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="layoutgeneration.strat.grid_placement.GridPlacement.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/grid_placement.html#GridPlacement.generate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.grid_placement.GridPlacement.generate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>region</strong> – Region in which to generate other regions</p>
+</dd>
+</dl>
+<p>returns a set of regions contain in the input region.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-layoutgeneration.strat.merge_executor">
+<span id="layoutgeneration-strat-merge-executor-module"></span><h2>layoutgeneration.strat.merge_executor module<a class="headerlink" href="#module-layoutgeneration.strat.merge_executor" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="layoutgeneration.strat.merge_executor.extract_root_array">
+<span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.merge_executor.</span></span><span class="sig-name descname"><span class="pre">extract_root_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#layoutgeneration.strat.executor.RegionNode" title="layoutgeneration.strat.executor.RegionNode"><span class="pre">RegionNode</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">finals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/layoutgeneration/strat/merge_executor.html#extract_root_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.merge_executor.extract_root_array" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> – Node in a tree</p></li>
+<li><p><strong>finals</strong> – List of the final nodes; not to be merged</p></li>
+</ul>
+</dd>
+</dl>
+<p>Will return an array version of the root node of type RegionType</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="layoutgeneration.strat.merge_executor.merge_root">
+<span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.merge_executor.</span></span><span class="sig-name descname"><span class="pre">merge_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region_node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#layoutgeneration.strat.executor.RegionNode" title="layoutgeneration.strat.executor.RegionNode"><span class="pre">RegionNode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#layoutgeneration.strat.executor.RegionNode" title="layoutgeneration.strat.executor.RegionNode"><span class="pre">RegionNode</span></a></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/merge_executor.html#merge_root"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.merge_executor.merge_root" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-layoutgeneration.strat.merge_regions">
+<span id="layoutgeneration-strat-merge-regions-module"></span><h2>layoutgeneration.strat.merge_regions module<a class="headerlink" href="#module-layoutgeneration.strat.merge_regions" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="layoutgeneration.strat.merge_regions.MergeRegion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.merge_regions.</span></span><span class="sig-name descname"><span class="pre">MergeRegion</span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/merge_regions.html#MergeRegion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.merge_regions.MergeRegion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="layoutgeneration.strat.merge_regions.MergeRegion.find_all_regions">
+<span class="sig-name descname"><span class="pre">find_all_regions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.orientation.Orientation" title="layoutgeneration.layout.orientation.Orientation"><span class="pre">Orientation</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/layoutgeneration/strat/merge_regions.html#MergeRegion.find_all_regions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.merge_regions.MergeRegion.find_all_regions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="layoutgeneration.strat.merge_regions.MergeRegion.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/merge_regions.html#MergeRegion.generate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.merge_regions.MergeRegion.generate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="layoutgeneration.strat.merge_regions.find_reg">
+<span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.merge_regions.</span></span><span class="sig-name descname"><span class="pre">find_reg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_to_merge</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/layoutgeneration/strat/merge_regions.html#find_reg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.merge_regions.find_reg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-layoutgeneration.strat.place_al">
+<span id="layoutgeneration-strat-place-al-module"></span><h2>layoutgeneration.strat.place_al module<a class="headerlink" href="#module-layoutgeneration.strat.place_al" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="layoutgeneration.strat.place_al.PlaceALStrat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.place_al.</span></span><span class="sig-name descname"><span class="pre">PlaceALStrat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_tries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/layoutgeneration/strat/place_al.html#PlaceALStrat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.place_al.PlaceALStrat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#layoutgeneration.strat.base_start.BaseStrat" title="layoutgeneration.strat.base_start.BaseStrat"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseStrat</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="layoutgeneration.strat.place_al.PlaceALStrat.add_path">
+<span class="sig-name descname"><span class="pre">add_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_vertical</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/place_al.html#PlaceALStrat.add_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.place_al.PlaceALStrat.add_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="layoutgeneration.strat.place_al.PlaceALStrat.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/place_al.html#PlaceALStrat.generate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.place_al.PlaceALStrat.generate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>region</strong> – Region in which to generate other regions</p>
+</dd>
+</dl>
+<p>returns a set of regions contain in the input region.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="layoutgeneration.strat.place_al.PlaceALStrat.generate_al">
+<span class="sig-name descname"><span class="pre">generate_al</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.Tuple" title="(in Python v3.8)"><span class="pre">Tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#bool" title="(in Python v3.8)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/place_al.html#PlaceALStrat.generate_al"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.place_al.PlaceALStrat.generate_al" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-layoutgeneration.strat.room_placement">
+<span id="layoutgeneration-strat-room-placement-module"></span><h2>layoutgeneration.strat.room_placement module<a class="headerlink" href="#module-layoutgeneration.strat.room_placement" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="layoutgeneration.strat.room_placement.SimpleRoomPlacement">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.room_placement.</span></span><span class="sig-name descname"><span class="pre">SimpleRoomPlacement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_rooms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">choices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.RegionType" title="layoutgeneration.layout.region.RegionType"><span class="pre">RegionType</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region_prov</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.provider.html#layoutgeneration.provider.region_provider.RegionProvider" title="layoutgeneration.provider.region_provider.RegionProvider"><span class="pre">RegionProvider</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient_prov</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.provider.html#layoutgeneration.provider.orientation_provider.OrientationProvider" title="layoutgeneration.provider.orientation_provider.OrientationProvider"><span class="pre">OrientationProvider</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/layoutgeneration/strat/room_placement.html#SimpleRoomPlacement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.room_placement.SimpleRoomPlacement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#layoutgeneration.strat.base_start.BaseStrat" title="layoutgeneration.strat.base_start.BaseStrat"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseStrat</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="layoutgeneration.strat.room_placement.SimpleRoomPlacement.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/room_placement.html#SimpleRoomPlacement.generate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.room_placement.SimpleRoomPlacement.generate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>region</strong> – Region in which to generate other regions</p>
+</dd>
+</dl>
+<p>returns a set of regions contain in the input region.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-layoutgeneration.strat.space_partition">
+<span id="layoutgeneration-strat-space-partition-module"></span><h2>layoutgeneration.strat.space_partition module<a class="headerlink" href="#module-layoutgeneration.strat.space_partition" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="layoutgeneration.strat.space_partition.BinarySpacePartitionStart">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">layoutgeneration.strat.space_partition.</span></span><span class="sig-name descname"><span class="pre">BinarySpacePartitionStart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nb_cuts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dimension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/functions.html#int" title="(in Python v3.8)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">choices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.RegionType" title="layoutgeneration.layout.region.RegionType"><span class="pre">RegionType</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region_prov</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.provider.html#layoutgeneration.provider.region_provider.RegionProvider" title="layoutgeneration.provider.region_provider.RegionProvider"><span class="pre">RegionProvider</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient_prov</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.provider.html#layoutgeneration.provider.orientation_provider.OrientationProvider" title="layoutgeneration.provider.orientation_provider.OrientationProvider"><span class="pre">OrientationProvider</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/layoutgeneration/strat/space_partition.html#BinarySpacePartitionStart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.space_partition.BinarySpacePartitionStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#layoutgeneration.strat.base_start.BaseStrat" title="layoutgeneration.strat.base_start.BaseStrat"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseStrat</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="layoutgeneration.strat.space_partition.BinarySpacePartitionStart.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="layoutgeneration.layout.html#layoutgeneration.layout.region.Region" title="layoutgeneration.layout.region.Region"><span class="pre">Region</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/layoutgeneration/strat/space_partition.html#BinarySpacePartitionStart.generate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#layoutgeneration.strat.space_partition.BinarySpacePartitionStart.generate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>region</strong> – Region in which to generate other regions</p>
+</dd>
+</dl>
+<p>returns a set of regions contain in the input region.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-layoutgeneration.strat">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-layoutgeneration.strat" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">LayoutGeneration</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="layoutgeneration.html">layoutgeneration package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">layoutgeneration</a><ul>
+  <li><a href="layoutgeneration.html">layoutgeneration package</a><ul>
+      <li>Previous: <a href="layoutgeneration.provider.html" title="previous chapter">layoutgeneration.provider package</a></li>
+      <li>Next: <a href="layoutgeneration.treeplotter.html" title="next chapter">layoutgeneration.treeplotter package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, anthony.yaghi@bmw.de.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="../_sources/api/layoutgeneration.strat.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
