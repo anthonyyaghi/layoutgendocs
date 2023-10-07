@@ -1,0 +1,35 @@
+[
+  {"name": "EMPTY", "color": [200, 200, 200], "final": false, "dir_path": ""},
+  {"name": "EMPTY_PATH", "color": [100, 100, 100], "final": false, "dir_path": ""},
+  {"name": "FINAL_EMPTY_PATH", "color": [0, 200, 0], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/Empty_Path/"},
+  {"name": "FINAL_EMPTY_PATH_STR", "color": [39, 50, 23], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/STR_Dolly/"},
+
+  {"name": "ASSEMBLY_MATERIALS", "color": [252, 171, 100], "final": false, "dir_path": ""},
+  {"name": "SMALL_ASSEMBLY_MATERIALS", "color": [255, 255, 0], "final": false, "dir_path": ""},
+
+  {"name": "ASSEMBLY_LINE", "color": [0, 255, 0], "final": false, "dir_path": ""},
+  {"name": "FINAL_AL", "color": [0, 200, 0], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/AL_Empty/x/"},
+  {"name": "DOLLY_AREA", "color": [255, 0, 0], "final": false, "dir_path": ""},
+  {"name": "FINAL_DOLLY", "color": [200, 50, 0], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/Dolly/"},
+  {"name": "STILLAGE_AREA", "color": [255, 0, 255], "final": false, "dir_path": ""},
+  {"name": "FINAL_STILLAGE", "color": [200, 0, 200], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/Stillage/"},
+  {"name": "STR_AREA", "color": [0, 255, 255], "final": false, "dir_path": ""},
+  {"name": "FINAL_STR", "color": [0, 200, 200], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/STR/"},
+  {"name": "FORKLIFT_AREA", "color": [0, 0, 255], "final": false, "dir_path": ""},
+  {"name": "FINAL_FORKLIFT", "color": [0, 0, 200], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/Forklifts/"},
+  {"name": "PALLET_AREA", "color": [95, 120, 156], "final": false, "dir_path": ""},
+  {"name": "FINAL_PALLET", "color": [80, 100, 128], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/Palette/"},
+  {"name": "JACK_AREA", "color": [0, 106, 255], "final": false, "dir_path": ""},
+  {"name": "FINAL_JACK", "color": [84, 155, 255], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/Jacks/"},
+  {"name": "STRDOLLY_AREA", "color": [0, 190, 61], "final": false, "dir_path": ""},
+  {"name": "FINAL_STRDOLLY", "color": [121, 68, 10], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/STR_Dolly/"},
+  {"name": "STILLAGEDOLLY_AREA", "color": [0, 110, 90], "final": false, "dir_path": ""},
+  {"name": "FINAL_STILLAGEDOLLY", "color": [50, 240, 19], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/Dolly_Stillage/"},
+  {"name": "STILLAGEPALETTE_AREA", "color": [100, 110, 5], "final": false, "dir_path": ""},
+  {"name": "FINAL_STILLAGEPALETTE", "color": [5, 60, 84], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/Palette_Stillage/"},
+  {"name": "RACKS_AREA", "color": [200, 200, 200], "final": false, "dir_path": ""},
+  {"name": "FINAL_RACKS", "color": [200, 100, 131], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/Rack/"},
+  {"name": "STORAGE_AREA", "color": [151, 201, 55], "final": false, "dir_path": ""},
+  {"name": "FINAL_STORAGE", "color": [100, 100, 50], "final": true, "dir_path": "omniverse://192.168.188.144/SORDINext/Assets/Regions/Storage_Cabinets/"}
+]
+

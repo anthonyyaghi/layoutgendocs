@@ -1,0 +1,234 @@
+{
+  "region": {
+    "x": 220,
+    "y": 230,
+    "width": 5000,
+    "height": 5000,
+    "orientation": "UP",
+    "type": "EMPTY",
+    "final": 0
+  },
+  "strategies": [
+    {
+    "EMPTY": {
+        "name": "PlaceALStrat",
+        "args": {
+          "min_width": 465,
+          "max_width": 466,
+          "max_tries": 5,
+          "left": true,
+          "right": true,
+          "empty_path_width": 210
+        }
+      }
+    },
+    {
+      "ASSEMBLY_LINE": {
+        "name": "GridPlacement",
+        "args": {
+          "cell_size": [
+            460,
+            1200
+          ],
+          "keep_extra_space": true
+        },
+        "choices": [
+          "FINAL_AL"
+        ],
+        "region_prov": {
+          "name": "SequentialRegionProvider",
+          "args": {}
+        },
+        "orient_prov": {
+          "name": "UniqueOrientationProvider",
+          "args": {
+            "orientation": "AUTO"
+          }
+        }
+      }
+    },
+    {
+      "ASSEMBLY_LINE": {
+        "name": "GridPlacement",
+        "args": {
+          "cell_size": [
+            1200,
+            460
+          ],
+          "keep_extra_space": true
+        },
+        "choices": [
+          "FINAL_AL"
+        ],
+        "region_prov": {
+          "name": "SequentialRegionProvider",
+          "args": {}
+        },
+        "orient_prov": {
+          "name": "UniqueOrientationProvider",
+          "args": {
+            "orientation": "AUTO"
+          }
+        }
+      }
+    },
+    {
+      "EMPTY_PATH": {
+        "name": "GridPlacement",
+        "args": {
+          "cell_size": [
+            200,
+            200
+          ],
+          "keep_extra_space": true
+        },
+        "choices": [
+          "FINAL_EMPTY_PATH", "FINAL_EMPTY_PATH_STR"
+        ],
+        "region_prov": {
+          "name": "StochasticRegionProvider",
+          "args": {
+            "probabilities": [0.95, 0.05]
+          }
+        },
+        "orient_prov": {
+          "name": "UniqueOrientationProvider",
+          "args": {
+            "orientation": "AUTO"
+          }
+        }
+      }
+    }
+    ,
+    {
+      "ASSEMBLY_MATERIALS": {
+        "name": "GridPlacement",
+        "args": {
+          "cell_size": [
+            376,
+            376
+          ],
+          "keep_extra_space": true
+        },
+        "choices": [
+          "FINAL_RACKS", "SMALL_ASSEMBLY_MATERIALS"
+        ],
+        "region_prov": {
+          "name": "RandomRegionProvider",
+          "args": {}
+        },
+        "orient_prov": {
+          "name": "UniqueOrientationProvider",
+          "args": {
+            "orientation": "AUTO"
+          }
+        }
+      }
+    },
+    {
+      "SMALL_ASSEMBLY_MATERIALS": {
+        "name": "GridPlacement",
+        "args": {
+          "cell_size": [
+            150,
+            150
+          ],
+          "keep_extra_space": true
+        },
+        "choices": [
+          "FINAL_STILLAGEDOLLY", "FINAL_PALLET"
+        ],
+        "region_prov": {
+          "name": "RandomRegionProvider",
+          "args": {}
+        },
+        "orient_prov": {
+          "name": "UniqueOrientationProvider",
+          "args": {
+            "orientation": "AUTO"
+          }
+        }
+      }
+    },
+
+
+    {
+      "EMPTY": {
+        "name": "SimpleRoomPlacement",
+        "choices": [
+          "STILLAGEPALETTE_AREA", "STORAGE_AREA"
+        ],
+
+        "region_prov": {
+          "name": "RandomRegionProvider",
+          "args": {}
+        },
+
+        "orient_prov": {
+          "name": "RandomOrientationProvider",
+          "args": {
+            "choices": ["UP"]
+          }
+        },
+
+        "args": {
+          "min_width": 400,
+          "min_height": 700,
+          "max_width": 705,
+          "max_height": 705,
+          "max_num_rooms": 5
+        }
+      }
+    },
+    {
+      "STILLAGEPALETTE_AREA": {
+        "name": "GridPlacement",
+        "args": {
+          "cell_size": [
+            148,
+            148
+          ],
+          "keep_extra_space": true
+        },
+        "choices": [
+          "FINAL_STILLAGEPALETTE"
+        ],
+        "region_prov": {
+          "name": "SequentialRegionProvider",
+          "args": {}
+        },
+        "orient_prov": {
+          "name": "UniqueOrientationProvider",
+          "args": {
+            "orientation": "AUTO"
+          }
+        }
+      }
+    },
+    {
+      "STORAGE_AREA": {
+        "name": "GridPlacement",
+        "args": {
+          "cell_size": [
+            122,
+            122
+          ],
+          "keep_extra_space": false
+        },
+        "choices": [
+          "FINAL_STORAGE"
+        ],
+        "region_prov": {
+          "name": "SequentialRegionProvider",
+          "args": {}
+        },
+        "orient_prov": {
+          "name": "UniqueOrientationProvider",
+          "args": {
+            "orientation": "AUTO"
+          }
+        }
+      }
+    }
+  ]
+}
